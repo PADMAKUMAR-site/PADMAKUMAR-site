@@ -8,102 +8,104 @@
 }
 
 body {
-  background-color: rgb(12, 13, 19);
-  font-family: 'Inter', sans-serif; /* Using 'sans-serif' as a fallback */
-  background-image: url(background img.png);
+  background-color: rgb(6, 7, 12);
+  font-family: inter;
+  background-image: url(background-img.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
-  display: flex; /* Center content vertically */
-  justify-content: center;
-  align-items: center;
+  padding: 0 10%;
 }
 
-#header,
-nav {
+/* Header */
+#header, nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0; /* Removed top/bottom padding inconsistency */
+  padding-top: 10px;
+  padding-bottom: 10px;
   z-index: 1;
 }
 
 .nav-item {
   font-size: 1.2rem;
   font-weight: 500;
-  margin-left: 40px; /* Adjusted margin for better spacing */
+  margin-left: 60px;
   transition: color 0.12s, transform 0.12s;
 }
 
 nav .active {
-  color: #ff5234;
+  color: #3FA2F6;
 }
 
 .nav-item:hover {
-  color: #ff5234;
+  color: #3FA2F6;
 }
 
 .nav-item:active {
   transform: scale(1.1);
 }
 
+/* logo */
 .logo {
   font-size: 2rem;
   font-weight: 800;
 }
 
+/* Hero-section */
 #hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 960px; /* Set a maximum width for better responsiveness */
-  margin: 0 auto; /* Center the hero section horizontally */
 }
-
+/* Left */
 .hero-left {
   display: flex;
-  flex-direction: column; /* Changed to column for better content flow */
-  align-items: flex-start; /* Align items to the left */
-  padding: 150px 50px; /* Added left padding for better spacing */
+  align-items: center;
+  padding-top: 150px;
   z-index: 1;
 }
 
-h1 {
+h1{
   font-size: 4rem;
   font-weight: 800;
-  margin-bottom: 20px; /* Replaced padding with margin */
+  padding: 25px 0;
 }
 
 h3 {
   font-size: 2.3rem;
   font-weight: 800;
-  color: #ff5234;
-  margin-bottom: 30px; /* Replaced padding with margin */
+  color: #3FA2F6;
+  padding-bottom: 40px;
 }
 
 p {
   font-size: 1.2rem;
   color: lightgray;
   line-height: 1.5;
-  margin-bottom: 40px; /* Replaced padding with margin */
+  padding-bottom: 50px;
 }
 
+/* button */
 .cta button {
   color: black;
   font-size: 1.2rem;
   font-weight: 600;
-  padding: 15px 25px; /* Added horizontal padding */
+  padding: 15px 0;
+  width: 200px;
+  border:none;
   border-radius: 8px;
-  margin-right: 20px; /* Adjusted margin for better spacing */
-  background-color: #ff5234;
-  margin-bottom: 30px; /* Adjusted margin for better spacing */
+  margin-right: 50px;
+  background-color: #3FA2F6;
+  margin-bottom: 180px;
   transition: background-color 0.12s, border 0.12s, color 0.21s, padding 0.12s;
 }
 
 .cta .cta-1:hover {
   background-color: transparent;
-  color: #ff5234;
-  border: 2px solid #ff5234;
+  color: #3FA2F6;
+  border: 2px solid #3FA2F6;
+  padding: 13px 0;
 }
 
 .cta .cta-2:hover {
@@ -113,44 +115,51 @@ p {
 
 .cta .cta-2 {
   background-color: transparent;
-  color: #ff5234;
-  border: 2px solid #ff5234;
+  color: #3FA2F6;
+  border: 2px solid #3FA2F6;
+  padding: 13px 0;
 }
 
+/* Icons */
 .social-icon {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
+.social-icon{
+  padding-bottom: 50px;
+}
+
 .social-icon i {
-  font-size: 1.2rem;
-  color: #ff5234;
-  border: 1px solid #ff5234;
-  border-radius: 50px;
-  padding: 8px;
-  height: 25px;
-  width: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.12s, box-shadow 0.12s;
-  cursor: pointer;
+font-size: 1.2rem;
+color: #3FA2F6;
+border: 1px solid #3FA2F6;
+border-radius: 50px;
+padding: 8px;
+height: 25px;
+width: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.12s, box-shadow 0.12s;
+cursor: pointer;
+
 }
 
 .social-icon i:hover {
   transform: scale(1.1);
-  text-shadow: 0 0 10px #ff5234;
+  text-shadow: 0 0 10px #3FA2F6;
 }
 
+/* Right section */
+
 .hero-right {
-  background-color: rgba(6, 7, 12, 0.705); /* Added initial background color */
   transition: background-color 3s, box-shadow 3s;
   cursor: pointer;
 }
-
 .hero-right:hover {
-  background-color: rgba(6, 7, 12, 0.5); /* Adjusted hover opacity */
+  background-color: rgba(6, 7, 12, 0.705);
   box-shadow: 
     0 0 20px rgb(6, 7, 12),
     0 0 50px rgb(6, 7, 12),
@@ -158,65 +167,69 @@ p {
     0 0 200px rgb(6, 7, 12);
 }
 
+/* Animations */
 @keyframes fadeIn {
-  from {
+  from{
     transform: translateY(40px);
     opacity: 0;
   }
-  to {
+  to{
     transform: translateY(0);
     opacity: 1;
   }
 }
 
 @keyframes fadeInTop {
-  from {
+  from{
     transform: translateY(-100%);
     opacity: 0;
   }
-  to {
+  to{
     transform: translateY(0);
     opacity: 1;
   }
 }
 
 @keyframes backgroundZoom {
-  from {
+  from{
     background-size: 80%;
   }
-  to {
+  to{
     background-size: 100%;
   }
 }
 
+
+
+
+/* Apply Animations */
 h1 {
-  animation: fadeIn 1.5s ease-out forwards;
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+h3 {
+  animation: fadeIn 1.4s ease-out forwards;
   opacity: 0;
   animation-delay: 0.4s;
 }
 
-h3 {
-  animation: fadeIn 1.8s ease-out forwards;
-  opacity: 0;
-  animation-delay: 0.5s;
-}
-
 p {
-  animation: fadeIn 2s ease-out forwards;
+  animation: fadeIn 1.6s ease-out forwards;
   opacity: 0;
   animation-delay: 0.6s;
 }
-
 button {
-  animation: fadeIn 2.8s ease-out forwards;
+  animation: fadeIn 1.8s ease-out forwards;
   opacity: 0;
   animation-delay: 0.8s;
 }
 
 .social-icon {
-  animation: fadeIn 3s ease-out forwards;
+  animation: fadeIn 2s ease-out forwards;
   opacity: 0;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 
 .nav-item,
